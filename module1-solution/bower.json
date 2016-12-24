@@ -17,5 +17,15 @@
   "dependencies": {
     "angular": "^1.6.0",
     "bootstrap": "^3.3.7"
+  },
+  "install": {
+    "path": "assets",
+    "sources": {
+      "bootstrap": [
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/bootstrap/dist/js/bootstrap.min.js"
+      ]
+
+    }
   }
 }
