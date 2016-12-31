@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Week2 - Module2 Solution</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css">
+    </head>
+    <body ng-app="ShoppingListCheckOff">
+        <div class="container text-center">
+            <p><a href="/coursera-test" class="pull-left">&lt; Back to All Solutions</a></p>
+            <br><br>
+            <h3><small>Week2 - Module2 Solution</small><br>Check Off Shopping List Application</h3>
+            <br><br>
+            
+            <div>
+                <div class="col-md-6" ng-controller="ToBuyController as shoppingList">
+                    <h2>To Buy</h2>
+                    <hr>
+                    
+                    <p ng-if="shoppingList.items.length == 0" class="alert alert-success">Everything is bought!</p>
+                    
+                    <ol class="text-left">
+                        <li ng-repeat="item in shoppingList.items">
+                            <span style="width: 40%; display: inline-block;">Buy {{item.quantity}} {{item.name}}</span>
+                            
+                            <button class="text-right btn btn-primary" ng-click="shoppingList.boughtAction($index)">Bought</button>
+                        </li>
+                    </ol>
+                </div>
+                
+                <div class="col-md-6" ng-controller="AlreadyBoughtController as boughtList">
+                    <h2>Already Bought</h2>
+                    <hr>
+                    
+                    <p ng-if="boughtList.items.length == 0" class="alert alert-warning"> Nothing bought yet</p>
+                    
+                    <ol class="text-left">
+                        <li ng-repeat="item in boughtList.items">
+                            Bought {{item.quantity}} {{item.name}}
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+        <script src="../assets/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

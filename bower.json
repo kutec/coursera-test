@@ -1,10 +1,10 @@
 {
-  "name": "module1-solution",
+  "name": "coursera-test",
   "homepage": "https://github.com/kutec/coursera-test",
   "authors": [
     "Kushal Jayswal <ku@kutec.co.in>"
   ],
-  "description": "",
+  "description": "coursera-test modules solutions",
   "main": "",
   "license": "MIT",
   "ignore": [
@@ -15,8 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.6.0",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.1",
+    "jquery": "^3.1.1"
   },
   "install": {
     "path": "assets",
